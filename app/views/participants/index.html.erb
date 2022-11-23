@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Participants</h1>
+
+<div id="participants">
+
+
+  <table class="table table-success table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Registry ID</th>
+      <th scope="col">Coordinator ID</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @participants.each do |participant| %>
+      <tr>
+        <th scope="row"><%= participant.id%></th>
+        <td><%= participant.registry_id %></td>
+        <td><%= participant.coordinator_id %></td>
+        <td><%= participant.gender%></td>
+        <td><%= participant.birthday%></td>
+        <td><%= link_to 'info', participant_path(participant.id), class: "btn btn-outline-dark"%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+
+</div>
+
+<%= link_to "New participant", new_participant_path,class:"btn btn-outline-primary" %>

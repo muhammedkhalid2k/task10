@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registry: one
+  coordinator: one
+  gender: MyString
+  birthday: 2022-11-23
+
+two:
+  registry: two
+  coordinator: two
+  gender: MyString
+  birthday: 2022-11-23

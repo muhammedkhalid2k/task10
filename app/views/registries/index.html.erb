@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Registries</h1>
+
+<div id="registries">
+
+
+  <table class="table table-success table-hover">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">name</th>
+      <th scope="col">location</th>
+      <th scope="col">action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @registries.each do |registry| %>
+      <tr>
+        <th scope="row"><%= registry.id%></th>
+        <td><%= registry.name %></td>
+        <td><%= registry.location%></td>
+        <td><%= link_to 'info', registry_path(registry.id), class: "btn btn-outline-dark"%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+</div>
+
+<%= link_to "New registry", new_registry_path,class:"btn btn-outline-primary"  %>
